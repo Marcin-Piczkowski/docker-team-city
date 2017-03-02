@@ -1,0 +1,25 @@
+version: "2"
+
+services:
+  tc-server:
+    image: jetbrains/teamcity-server
+    container_name: tc-server
+    ports:
+      - "4444:8111"
+    volumes:
+      - /home/marcin/git/docker-team-city/volumes/data:/data/teamcity_server/datadir
+      - /home/marcin/git/docker-team-city/volumes/logs:/opt/teamcity/logs
+  tc-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile 
+    image: tc-agent
+    container_name: tc-agent
+    environment:
+      - SERVER_URL=172.17.0.1:4444
+    volumes:
+      - /home/marcin/git/docker-team-city/volumes/agent-conf:/data/teamcity_agent/conf
+      - /home/marcin/git/docker-team-city/volumes/project:/root/project
+      - /home/marcin/git/docker-team-city/volumes/.m2:/root/.m2
+    depends_on:
+      - tc-server

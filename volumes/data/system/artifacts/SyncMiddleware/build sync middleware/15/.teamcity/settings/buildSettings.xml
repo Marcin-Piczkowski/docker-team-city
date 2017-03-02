@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="fade3403-d196-4825-9e88-41466dcaf3b4" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/10.0/project-config.xsd">
+  <name>build sync middleware</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_1" name="build" type="Maven2">
+        <parameters>
+          <param name="goals" value="clean test" />
+          <param name="maven.home" value="" />
+          <param name="mavenSelection" value="mavenSelection:default" />
+          <param name="pomLocation" value="/root/project/lyris-syncmiddleware/pom.xml" />
+          <param name="runnerArgs" value="-P full-test" />
+          <param name="teamcity.build.workingDir" value="/root/project/lyris-syncmiddleware" />
+          <param name="teamcity.coverage.emma.include.source" value="true" />
+          <param name="teamcity.coverage.emma.instr.parameters" value="-ix -*Test*" />
+          <param name="teamcity.coverage.idea.includePatterns" value="*" />
+          <param name="teamcity.coverage.jacoco.patterns" value="+:*" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="userSettingsPath" value="" />
+          <param name="userSettingsSelection" value="userSettingsSelection:default" />
+        </parameters>
+      </runner>
+      <runner id="RUNNER_3" name="Jacoco" type="simpleRunner">
+        <parameters>
+          <param name="script.content" value="echo \##teamcity[jacocoReport dataPath=&quot;'&quot;/root/project/lyris-syncmiddleware/lyris-syncmiddleware-app/target/jacoco.exec&quot;'&quot; classpath=&quot;'+:/root/project/lyris-syncmiddleware/lyris-syncmiddleware-app/target/classes/**'&quot;]" />
+          <param name="teamcity.build.workingDir" value="/root/project/lyris-syncmiddleware" />
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings />
+    <requirements />
+    <build-triggers />
+    <cleanup />
+  </settings>
+</build-type>
+

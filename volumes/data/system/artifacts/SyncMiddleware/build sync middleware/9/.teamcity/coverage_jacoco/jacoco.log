@@ -1,0 +1,5 @@
+Jacoco report builder run with arguments: [-dataPaths, 'lyris-syncmiddleware-app/target/jacoco.exec', -sr, '.', -cp, '+:lyris-syncmiddleware-app/target/classes/**', -i, '*', -rd, '/opt/buildagent/temp/buildTmp/JACOCO6904192445514777823coverage/report', -t, 'Sync Middleware', -l, 'true']
+Jacoco report builder will abort
+
+
+Error: no jacoco.exec files found in patterns: [lyris-syncmiddleware-app/target/jacoco.exec]

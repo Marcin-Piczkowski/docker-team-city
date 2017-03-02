@@ -1,0 +1,6 @@
+#
+#Tue Feb 28 22:05:56 UTC 2017
+teamcity.jacoco.coverage.datafile=/opt/buildagent/temp/buildTmp/JACOCO692927219603527851coverage/jacoco.exec
+teamcity.coverage.jacoco.includePatterns=*
+teamcity.coverage.jacoco.sources=.
+teamcity.coverage.jacoco.classpath=+\:/root/project/lyris-syncmiddleware/lyris-syncmiddleware-app/target/classes/**

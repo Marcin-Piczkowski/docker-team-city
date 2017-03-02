@@ -1,0 +1,13 @@
+Jacoco report builder run with arguments: [-dataPaths, '/root/project/lyris-syncmiddleware/lyris-syncmiddleware-app/target/jacoco.exec', -sr, '.', -cp, '+:lyris-syncmiddleware-app/target/classes/**', -i, '*', -rd, '/opt/buildagent/temp/buildTmp/JACOCO7682808535609798586coverage/report', -t, 'Sync Middleware', -l, 'true']
+Reading data from /root/project/lyris-syncmiddleware/lyris-syncmiddleware-app/target/jacoco.exec
+Exec files loaded in: 56
+Filter set up with includes: [*]; excludes: []
+total 0 classfiles processed, 0 analyzed
+Classfiles read in: 15
+Info headers read in: 0
+Creating SourceCodeFinder from .
+Source files read in: 90
+Report written in: 66
+Jacoco report builder exits normally
+
+

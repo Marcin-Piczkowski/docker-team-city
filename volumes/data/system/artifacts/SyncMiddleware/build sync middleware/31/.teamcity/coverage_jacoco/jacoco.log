@@ -1,0 +1,14 @@
+Jacoco report builder run with arguments: [-dataPaths, '/root/project/lyris-syncmiddleware/lyris-syncmiddleware-app/target/jacoco.exec', -sr, '.', -cp, '+:/root/project/lyris-syncmiddleware/lyris-syncmiddleware-app/target/classes/**', -i, '*', -rd, '/opt/buildagent/temp/buildTmp/JACOCO8679125713952116749coverage/report', -t, 'Sync Middleware', -l, 'true']
+Reading data from /root/project/lyris-syncmiddleware/lyris-syncmiddleware-app/target/jacoco.exec
+Exec files loaded in: 64
+Filter set up with includes: [*]; excludes: []
+java.lang.IllegalStateException: External scan (outside of basedir) is not allowed
+	at jetbrains.buildServer.util.pathMatcher.DirectoryScanner.normalizePatterns(DirectoryScanner.java:137)
+	at jetbrains.buildServer.util.pathMatcher.DirectoryScanner.<init>(DirectoryScanner.java:97)
+	at jetbrains.buildServer.util.pathMatcher.AntPatternFileCollector.scanDir(AntPatternFileCollector.java:125)
+	at jetbrains.buildServer.coverage.jacoco.JacocoReportBuilder.analyzeClassPath(JacocoReportBuilder.java:233)
+	at jetbrains.buildServer.coverage.jacoco.JacocoReportBuilder.getCoverageBundle(JacocoReportBuilder.java:180)
+	at jetbrains.buildServer.coverage.jacoco.JacocoReportBuilder.generateReport(JacocoReportBuilder.java:100)
+	at jetbrains.buildServer.coverage.jacoco.JacocoReportBuilder.main(JacocoReportBuilder.java:40)
+
+
